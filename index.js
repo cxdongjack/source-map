@@ -1,9 +1,15 @@
-function a() {
-    console.log('a');
+function aaa() {
+    console.log('aaa');
+    bbb();
 }
 
-function b() {
-    console.log('b');
+function bbb() {
+    console.log('bbb');
+    ddd = ddd + 4
 }
 
-a()
+function ccc() {
+    console.log('ccc');
+}
+
+aaa()

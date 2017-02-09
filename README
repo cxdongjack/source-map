@@ -1,0 +1,14 @@
+# source-map实现
+
+## 参考文献
+http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html
+
+## 生成source-map
+./build
+
+## 解析
+./stack_map.py build.js.map < error
+
+## 浏览器访问
+in.run.sh
+http://localhost:8003/source-map/index.html

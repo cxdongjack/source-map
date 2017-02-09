@@ -6,10 +6,16 @@
 <meta name="format-detection" content="telephone=no">
 </head>
 <body>
-<div id="root"></div>
+<div id="root">source-map</div>
 
+<script>
+window.onerror = function(msg, script, line, col, error) {
+    console.log(arguments);
+    console.log(error.stack ? error.stack.replace(/\n +/g, '\n').replace(/http.*\//g, '') : error);
+}
+</script>
 <!-- @begin[app-index] -->
-<script src="module/lib/include.js" data-module="app"></script>
+<script src="dist.js"></script>
 <!-- @end -->
 
 </body>

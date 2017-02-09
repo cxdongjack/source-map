@@ -1,0 +1,1 @@
+uglifyjs index.js -m -c "pure_getters=true,pure_funcs=['Date.now','Math.random']" -b "beautify=false,ascii-only=true" -e "window:window,undefined" --screw-ie8 --source-map build.js.map 2>/dev/null > dist.js

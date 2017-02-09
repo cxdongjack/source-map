@@ -66,10 +66,13 @@ regex = re.compile(r':(\d+):(\d+)')
 
 for line in sys.stdin:
     line = line.rstrip('\n')
-    print line
+    # print line
 
     result = regex.search(line)
 
     if result:
         origin = maps[bisect.bisect([(x[0], x[1]) for x in maps], (int(result.group(1)), int(result.group(2)))) - 1]
-        print '\t%s:%d:%d:%s' % (origin.src, origin.src_line, origin.src_col, origin.name)
+        # print '\t%s:%d:%d:%s' % (origin.src, origin.src_line, origin.src_col, origin.name)
+        print 'at %s (%s:%d:%d)' % (origin.name, origin.src, origin.src_line, origin.src_col)
+    else:
+        print line
