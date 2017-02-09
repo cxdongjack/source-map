@@ -12,3 +12,15 @@ http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html
 ## 浏览器访问
 in.run.sh
 http://localhost:8003/source-map/index.html
+
+## 错误统计服务模型
+
+### v1
+API: 设置js和对应的source-map文件(gitlab hook) 
+API: 接受错误信息, 输出日志(直接请求或者日志服务器)
+
+### v2
+提供一个view用于实时输出日志
+统计前100错误的数量
+
+
